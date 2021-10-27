@@ -4,6 +4,10 @@
 ====================== 
 */
 
+.scroll-lock {
+    overflow-y: hidden;
+}
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -112,10 +116,12 @@ img {
 */
 
 .header {
-    height: 202px;
+    height: 18.704vh;
     backdrop-filter: blur(7px);
     display: flex;
     align-items: flex-end;
+    position: relative;
+    z-index: 99;
     &__inner {
         padding: 36px 4.896vw 33px;
         display: flex;
@@ -167,6 +173,51 @@ img {
     }
 }
 
+.burger-btn {
+    display: none;
+    position: relative;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    &::after, &::before, span {
+        content: "";
+        background-color: $black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0.1px;
+    }
+
+    span {
+        top: 11.5px;
+    }
+
+    &.active {
+        &::before {
+            transform: rotate(45deg);
+	        top: 11px;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+	        bottom: 11px;
+            width: 100%;
+        }
+        span {
+            transform: scale(0);
+        }
+    }
+}
+
 /*
 ======================
         HERO
@@ -183,7 +234,8 @@ img {
 
     &__inner {
         padding-top: 202px;
-        height: 100vh;
+        padding-bottom: 130px;
+        height: 1080px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -258,6 +310,57 @@ img {
 }
 
 /*
+======================
+       RELATED
+====================== 
+*/
+
+.related {
+    margin-bottom: 150px;
+
+    .container {
+        padding: 0;
+    }
+}
+
+.related-slider1 {
+    margin-bottom: 30px;
+}
+
+.related-slider1, .related-slider2 {
+    .swiper-slide {
+        max-width: 809px;
+    }
+}
+
+.related-slide {
+    position: relative;
+    width: 100%;
+    max-width: 809px;
+    &__main {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 104px;
+        max-width: 250px;
+        .section-subtitle {
+            margin-bottom: 33px;
+        }
+        .btn {
+            margin-top: 23px;
+        }
+        .text {
+            line-height: 1.2;
+        }
+    }
+
+    &.e--right &__main {
+        right: unset;
+        left: 104px;
+    }
+}
+
+/*
 ==========================
         CATEGORIES
 ========================== 
@@ -280,7 +383,7 @@ img {
     &__nav {
         width: 100%;
         max-width: 747px;
-        margin-bottom: 160px;
+        margin-bottom: 8.333vw;
         overflow-x: auto;
         -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
@@ -474,7 +577,7 @@ img {
         padding: 46px;
 
         &>*:not(:last-child) {
-            margin-right: 100px;
+            margin-right: 5.208vw;
         }
     }
 
