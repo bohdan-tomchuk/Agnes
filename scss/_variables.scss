@@ -1,0 +1,25 @@
+$blue: #69aacf;
+$black: #000000;
+$gray: #808080;
+$white: #ffffff;
+
+@font-face {
+    font-family: 'TT-Norms-Bold';
+    src: url('../fonts/TTNorms-Bold.woff2') format('woff2'),
+        url('../fonts/TTNorms-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT-Norms-Regular';
+    src: url('../fonts/TTNorms-Regular.woff2') format('woff2'),
+        url('../fonts/TTNorms-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font_reg: 'TT-Norms-Regular';
+$font_bold: 'TT-Norms-Bold';

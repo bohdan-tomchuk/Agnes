@@ -1,0 +1,623 @@
+@include media(1440) {
+    /*
+    ======================
+            COMMON
+    ====================== 
+    */
+
+    .container {
+        padding: 0 32px;
+    }
+
+    /*
+    ======================
+            HEADER
+    ====================== 
+    */
+
+    .header {
+        &__inner {
+            padding: 36px 8px 33px;
+        }
+
+        &__lang {
+            margin-left: 32px;
+        }
+
+        &__logo {
+            max-width: 85px;
+        }
+    }
+
+    /*
+    ======================
+        RELATED
+    ====================== 
+    */
+
+    .related-slider1, .related-slider2 {
+        .swiper-slide {
+            max-width: 600px;
+        }
+    }
+
+    .related-slide {
+        &__main {
+            right: 50px;
+        }
+    }
+
+    /*
+    ==========================
+            SVJATO
+    ========================== 
+    */
+
+    .svjato {
+        &__inner {
+            padding-bottom: 32px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__title {
+            margin-bottom: 48px;
+        }
+    }
+
+    /*
+    ==========================
+            FOOTER
+    ========================== 
+    */
+
+    .footer {
+        &__top {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 32px;
+
+            &>* {
+                margin: 0 !important;
+            }
+        }
+    }
+
+    /*
+    ==========================
+        CATATALOG PAGE
+    ========================== 
+    */
+
+    .catalog-hero {
+        margin: 0 -32px;
+    }
+
+    /*
+    ==========================
+        PRODUCT BENEFITS
+    ========================== 
+    */
+
+    .product-benefits {
+        &__inner {
+            padding: 1.5vw 3vw;
+        }
+
+        &__img {
+            margin-right: 24px;
+            max-width: 300px;
+        }
+    }
+}
+
+@include media(1024) {
+
+    /*
+    ======================
+            HEADER
+    ====================== 
+    */
+
+    .header {
+        height: 130px;
+        
+    }
+
+    .header-nav {
+        position: fixed;
+        z-index: -1;
+        left: -500px;
+        top: 0;
+        padding: 0 32px;
+        padding-top: 200px;
+        width: 100%;
+        min-height: 100vh;
+        max-width: 450px;
+        background-color: $blue;
+        transition: .4s;
+        &__list {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 48px;
+            }
+            a.text {
+                font-size: 20px;
+            }
+        }
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    .burger-btn {
+        display: block;
+        margin-left: 32px;
+    }
+
+    /*
+    ======================
+            HERO
+    ====================== 
+    */
+
+    .hero {
+        margin-top: -130px;
+        &__inner {
+            height: 100vh;
+            max-height: 1000px;
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+    }
+
+    /*
+    ======================
+            FOOTER
+    ====================== 
+    */
+
+    .footer {
+        &__nav {
+            position: unset;
+        }
+    }
+
+    /*
+    ==========================
+            SVJATO
+    ========================== 
+    */
+
+    .svjato {
+        &__inner {
+            height: unset;
+            background-size: cover;
+        }
+        &__text {
+            padding: 32px;
+        }
+    }
+
+    /*
+    ==========================
+            SEO BLOCK
+    ========================== 
+    */
+
+    .seo-block {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-row-gap: 32px;
+        }
+
+        &__title {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        &__text {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        &__arrow {
+            justify-self: center;
+        }
+    }
+
+    /*
+    ==========================
+            FOOTER
+    ========================== 
+    */
+
+    .footer {
+        &__main {
+            flex-direction: column;
+
+            &>* {
+                margin: 0;
+                padding: 0;
+                border: none;
+
+                &:not(:last-child) {
+                    margin-bottom: 48px;
+                }
+            }
+        }
+    }
+
+    .footer-nav  {
+        &__list {
+            flex-direction: column;
+            &>*:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /*
+    ==========================
+        CATEGORIES PAGE
+    ========================== 
+    */
+
+    .categories-page {
+        &__inner {
+            &>* {
+                max-height: 410px;
+                &:nth-child(1) {
+                    grid-column: 1 / 5;
+                }
+                &:nth-child(2) {
+                    grid-column: 5 / 9;
+                }
+                &:nth-child(3) {
+                    grid-column: 1 / 5;
+                }
+                &:nth-child(4) {
+                    grid-column: 5 / 9;
+                }
+                &:nth-child(5) {
+                    grid-column: 1 / 5;
+                }
+                &:nth-child(6) {
+                    grid-column: 5 / 9;
+                }
+                &:nth-child(7) {
+                    grid-column: 1 / 9;
+                }
+            }
+        }
+    }
+
+    .catalog-list {
+        &__inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2.604vw;
+        }
+    }
+
+    /*
+    ==========================
+        PRODUCT PROFILE
+    ========================== 
+    */
+
+    .product-profile {
+        &__left {
+            margin-right: 32px;
+        }
+    }
+
+    /*
+    ==========================
+        PRODUCT BENEFITS
+    ========================== 
+    */
+
+    .product-benefits {
+
+        &__inner {
+            .text {
+                font-size: 14px;
+            }
+        }
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__item {
+            img {
+                max-width: 50px;
+            }
+        }
+    }
+
+    /*
+    ==========================
+            INDIVIDUAL
+    ========================== 
+    */
+
+    .product-related {
+        &__list {
+            grid-row-gap: 50px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include media(960) {}
+
+@include media(768) {
+
+    /*
+    ======================
+        RELATED
+    ====================== 
+    */
+
+    .related-slider1, .related-slider2 {
+        .swiper-slide {
+            max-width: 500px;
+        }
+    }
+
+    .related-slide {
+        &__main {
+            right: unset;
+            left: 32px;
+            .section-subtitle {
+                margin-bottom: 16px;
+            }
+            .btn {
+                margin-top: 16px;
+            }
+        }
+
+        &.e--right &__main {
+            left: 32px;
+        }
+    }
+
+    .header {
+        &__inner {
+            padding: 36px 0px 33px;
+        }
+        &__logo {
+            margin-right: 16px;
+        }
+        &__lang {
+            margin-left: 16px;
+        }
+        .burger-btn {
+            margin-left: 16px;
+        }
+    }
+
+    .hero {
+        &__title {
+            margin-left: unset;
+        }
+    }
+
+    /*
+    ======================
+            ABOUT
+    ====================== 
+    */
+
+    .about {
+        &__inner {
+            flex-direction: column;
+
+            &::after {
+                position: unset;
+                height: unset;
+                transform: unset;
+                align-self: center;
+                width: calc(100% - 64px);
+                border-left: unset;
+                border-bottom: 1px solid $white;
+                order: 2;
+            }
+            &>* {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        &__left {
+            order: 1;
+        }
+
+        &__right {
+            order: 3;
+        }
+    }
+
+    /*
+    ==========================
+            SEO BLOCK
+    ========================== 
+    */
+
+    .seo-block {
+        &__arrow {
+            display: none;
+        }
+
+        &__text {
+            grid-column-end: 5;
+        }
+    }
+
+    /*
+    ==========================
+            FOOTER
+    ========================== 
+    */
+
+    .footer {
+        &__info-links {
+            flex-direction: column;
+            
+            &>*:not(:last-child) {
+                margin-bottom: 48px;
+            }
+        }
+    }
+
+    .feedback {
+        &__inner {
+            .section-subtitle {
+                flex-direction: column;
+                align-items: center;
+                p {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    /*
+    ==========================
+        PRODUCT PROFILE
+    ========================== 
+    */
+
+    .product-profile {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__left {
+            margin-right: unset;
+        }
+
+        &__right {
+            max-width: unset;
+        }
+    }
+
+    /*
+    ==========================
+        PRODUCT BENEFITS
+    ========================== 
+    */
+
+    .product-benefits {
+        &__inner {
+            margin: 0 -32px;
+            flex-direction: column;
+        }
+
+        &__img {
+            margin-bottom: 48px;
+            margin-right: unset;
+        }
+
+        &__item {
+            img {
+                margin: 8px;
+                max-width: 40px;
+            }
+        }
+    }
+
+    /*
+    ==========================
+            INDIVIDUAL
+    ========================== 
+    */
+
+    .individual {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__title {
+            margin-bottom: 32px;
+            margin-right: unset;
+        }
+
+        &__text {
+            border: none;
+            border-top: 1px solid $blue;
+            border-bottom: 1px solid $blue;
+            margin-bottom: 32px;
+            margin-right: unset;
+            padding: 16px;
+        }
+    }
+
+}
+
+@include media(640) {
+    /*
+    ==========================
+        CATEGORIES PAGE
+    ========================== 
+    */
+
+    .categories-page {
+        &__inner {
+            &>* {
+                max-height: 200px;
+                &:nth-child(1) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(2) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(3) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(4) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(5) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(6) {
+                    grid-column: 1 / 9;
+                }
+                &:nth-child(7) {
+                    grid-column: 1 / 9;
+                }
+            }
+        }
+    }
+
+    /*
+    ==========================
+            INDIVIDUAL
+    ========================== 
+    */
+
+    .product-related {
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+@include media(480) {}
+
+@include media(420) {}
+
+@include media(320) {}
