@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,KADC,CACD,KAAK,CAAC;EACF,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,IAAI;CACnB",
+    "sources": [
+        "../../components/atoms/a-checkbox.scss"
+    ],
+    "names": [],
+    "file": "a-checkbox.css"
+}
