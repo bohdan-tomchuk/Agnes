@@ -34,4 +34,16 @@ $(function () {
             delay: 3500,
         },
     });
+
+    const swiper3 = new Swiper('.product-slider.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 30,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+    });
 }); // end of ready
