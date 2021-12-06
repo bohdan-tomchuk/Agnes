@@ -32,6 +32,10 @@ img {
         background-color: $black;
     }
 
+    &.e--blue {
+        background-color: $blue;
+    }
+
     &.e--clip {
         border: 1px solid $white;
         background-color: transparent;
@@ -47,6 +51,7 @@ img {
 }
 
 main {
+    position: relative;
     &.e--catalog .container {
         display: grid;
         grid-template-columns: 25.926% 70.988%;
@@ -482,11 +487,24 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
         .section-subtitle {
             display: flex;
             &>* {
                 margin-left: 8px;
             }
+        }
+    }
+
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__btns {
+        display: flex;
+
+        &>*:not(:last-child) {
+            margin-right: 2.760vw;
         }
     }
 }
@@ -894,6 +912,12 @@ main {
     &__left {
         margin-right: 10.625vw;
         max-width: 600px;
+        width: 60%;
+
+        .wrapper {
+            position: sticky;
+            top: 32px;
+        }
     }
 
     &__img {
@@ -927,6 +951,48 @@ main {
 
     &__text {
         margin-bottom: 70px;
+    }
+}
+
+.product-slider {
+    .swiper-button-next {
+        right: 16px;
+        width: unset;
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+
+            background-image: url('../images/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 16px;
+        width: unset;
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+
+            background-image: url('../images/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+
+        transform: rotate(180deg);
     }
 }
 
@@ -967,6 +1033,26 @@ main {
         width: 100%;
         img  {
             margin-right: 16px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+
+            img {
+                max-width: 25px;
+                margin-right: 16px;
+            }
+
         }
     }
 
@@ -1038,10 +1124,10 @@ main {
     padding-bottom: 136px;
     position: relative;
     z-index: 7;
-    margin-top: -550px;
+    margin-top: -830px;
     background-color: #F5F5F5;
     &__inner {
-        padding-top: 550px;
+        padding-top: 830px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1086,5 +1172,74 @@ main {
     &:hover {
         transform: scale(1.1);
         padding: 10px;
+    }
+}
+
+/*
+==========================
+        PRICE BAR
+========================== 
+*/
+
+.price-bar {
+    margin-bottom: 100px;
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    background-color: #F5F5F5;
+    min-height: 150px;
+    height: 100%;
+    max-height: 214px;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+
+    .container {
+        height: 100%;
+    }
+
+    &__inner {
+        margin: auto 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &>*:last-child {
+            max-width: 200px;
+            margin-left: 4.688vw;
+            text-align: right;
+            display: flex;
+            align-items: center;
+
+            img {
+                max-width: 25px;
+                margin-right: 14px;
+            }
+        }
+    }
+
+    &__text {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 230px;
+        img {
+            max-width: 25px;
+            margin-right: 14px;
+        }
+    }
+
+    &__price {
+        margin-left: auto;
+        
+        p {
+            font-family: $font_bold;
+            font-size: clamp(28px, 2.083vw, 40px)
+        }
+    }
+    .btn {
+        margin-left: 3.750vw;
     }
 }

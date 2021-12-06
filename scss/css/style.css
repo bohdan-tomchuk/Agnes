@@ -1210,13 +1210,6 @@ main.e--catalog .container {
 .product-profile__left {
   margin-right: 10.625vw;
   max-width: 600px;
-  width: 60%;
-}
-
-.product-profile__left .wrapper {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 32px;
 }
 
 .product-profile__img {
@@ -2096,7 +2089,6 @@ main.e--catalog .container {
   }
   .product-profile__left {
     margin-right: unset;
-    width: 100%;
   }
   .product-profile__right {
     max-width: unset;
@@ -2154,9 +2146,6 @@ main.e--catalog .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .feedback__btns > *:not(:last-child) {
-    margin-bottom: 20px;
   }
 }
 
